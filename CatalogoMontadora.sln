@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogoMontadora", "CatalogoMontadora\CatalogoMontadora.csproj", "{53CE152B-9F56-482D-B0BD-2D023592CB7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53CE152B-9F56-482D-B0BD-2D023592CB7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53CE152B-9F56-482D-B0BD-2D023592CB7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53CE152B-9F56-482D-B0BD-2D023592CB7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53CE152B-9F56-482D-B0BD-2D023592CB7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1DAC716-5F2D-467D-8E65-6FA1BD272AB3}
+	EndGlobalSection
+EndGlobal
