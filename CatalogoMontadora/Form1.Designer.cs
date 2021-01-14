@@ -30,8 +30,8 @@ namespace CatalogoMontadora
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox_marca = new System.Windows.Forms.ComboBox();
+            this.comboBox_modelo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -42,23 +42,32 @@ namespace CatalogoMontadora
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // comboBox_marca
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(113, 127);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 0;
+            this.comboBox_marca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_marca.FormattingEnabled = true;
+            this.comboBox_marca.Items.AddRange(new object[] {
+            "CHEVROLET",
+            "CHERRY",
+            "FORD",
+            "PEUGEOT",
+            "TOYOTA",
+            "VOLKSWAGEN"});
+            this.comboBox_marca.Location = new System.Drawing.Point(113, 127);
+            this.comboBox_marca.Name = "comboBox_marca";
+            this.comboBox_marca.Size = new System.Drawing.Size(121, 24);
+            this.comboBox_marca.TabIndex = 0;
+            this.comboBox_marca.SelectedIndexChanged += new System.EventHandler(this.comboBox_marca_SelectedIndexChanged);
             // 
-            // comboBox2
+            // comboBox_modelo
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(113, 199);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 1;
+            this.comboBox_modelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_modelo.FormattingEnabled = true;
+            this.comboBox_modelo.Location = new System.Drawing.Point(113, 185);
+            this.comboBox_modelo.Name = "comboBox_modelo";
+            this.comboBox_modelo.Size = new System.Drawing.Size(121, 24);
+            this.comboBox_modelo.TabIndex = 1;
+            this.comboBox_modelo.SelectedIndexChanged += new System.EventHandler(this.comboBox_modelo_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -74,11 +83,12 @@ namespace CatalogoMontadora
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(49, 200);
+            this.label2.Location = new System.Drawing.Point(49, 186);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Modelo";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel1
             // 
@@ -117,8 +127,8 @@ namespace CatalogoMontadora
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox_modelo);
+            this.Controls.Add(this.comboBox_marca);
             this.Name = "Form1";
             this.Text = "Catálogo montadoras";
             this.panel1.ResumeLayout(false);
@@ -131,8 +141,8 @@ namespace CatalogoMontadora
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox_marca;
+        private System.Windows.Forms.ComboBox comboBox_modelo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
