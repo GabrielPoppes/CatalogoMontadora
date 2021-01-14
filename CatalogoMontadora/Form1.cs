@@ -25,8 +25,24 @@ namespace CatalogoMontadora
             // usamos o @ no diretório para usar a barra invertida
             string[] nomeModelosDosCarros = Directory.GetFiles(@"E:\Programmer\7. Linguagem C#\0.1 Projetos\InterfaceGrafica\CatalogoMontadora\CatalogoMontadora\CARROS");
 
-            foreach(string ImgCarros in nomeModelosDosCarros)
+            foreach(string imgCarros in nomeModelosDosCarros)
             {
+                // vamos separar o diretório por barra, porem, não podemos usar somente uma barra
+                // pois a IDE confunde com o cmd \n, por isso, usamos duas barras que ele entende o que queremos!
+                string[] separador = imgCarros.Split('\\');
+
+                // Agora, vamos querer somente o separador na posição 8, que é após a oitava barra
+                // ou seja, somente o nome do carro, e vamos separa-lo da extensão da imagem
+                // pra isso usamos o split('.') separando a partir do ponto
+                // gerando então duas posições: [0] é o nome do carro [1] é a extensão .png
+                string[] nomeCarro = separador[8].Split('.');
+
+                // Se o modelo selecionado for = ao nome da imagem
+                if(comboBox_modelo.Text == nomeCarro[0])
+                {
+                    // Localizamos a imagem, lembrando que "imagensCarros" é o combo box da imagem da aplicação
+                    imagensCarros.ImageLocation = $@"E:\Programmer\7. Linguagem C#\0.1 Projetos\InterfaceGrafica\CatalogoMontadora\CatalogoMontadora\CARROS\{nomeCarro[0]}.jpg";
+                }
 
             }
         }
@@ -38,8 +54,9 @@ namespace CatalogoMontadora
 
         private void comboBox_marca_SelectedIndexChanged(object sender, EventArgs e)
         {
+            imagensCarros.ImageLocation = null;
             // se o texto da combo box for == Marca
-            if(comboBox_marca.Text == "CHEVROLET")
+            if (comboBox_marca.Text == "CHEVROLET")
             {
                 // "Items" é o campo onde adicionamos as opções na box
                 // o mesmo que está nas propriedades
