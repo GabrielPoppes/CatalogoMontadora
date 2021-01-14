@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// PENDÊNCIAS PARA PRÓXIMA VERSÃO: ADICIONAR TIPO DO CARROS, EX. HATCH, SEDAN OU SUV
+
 namespace CatalogoMontadora
 {
     public partial class Form1 : Form
@@ -54,7 +56,9 @@ namespace CatalogoMontadora
 
         private void comboBox_marca_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Quando trocar a montadora de carros, limpar a imagem do carro que está aparecendo
             imagensCarros.ImageLocation = null;
+
             // se o texto da combo box for == Marca
             if (comboBox_marca.Text == "CHEVROLET")
             {
