@@ -35,13 +35,14 @@ namespace CatalogoMontadora
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imagensCarros = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagensCarros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox_marca
@@ -101,6 +102,15 @@ namespace CatalogoMontadora
             this.panel1.Size = new System.Drawing.Size(405, 360);
             this.panel1.TabIndex = 4;
             // 
+            // imagensCarros
+            // 
+            this.imagensCarros.Location = new System.Drawing.Point(13, 14);
+            this.imagensCarros.Name = "imagensCarros";
+            this.imagensCarros.Size = new System.Drawing.Size(381, 330);
+            this.imagensCarros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imagensCarros.TabIndex = 0;
+            this.imagensCarros.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -111,20 +121,11 @@ namespace CatalogoMontadora
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // imagensCarros
-            // 
-            this.imagensCarros.Location = new System.Drawing.Point(13, 14);
-            this.imagensCarros.Name = "imagensCarros";
-            this.imagensCarros.Size = new System.Drawing.Size(381, 330);
-            this.imagensCarros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imagensCarros.TabIndex = 0;
-            this.imagensCarros.TabStop = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(365, 375);
+            this.label3.Location = new System.Drawing.Point(365, 378);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 15);
             this.label3.TabIndex = 6;
@@ -134,18 +135,32 @@ namespace CatalogoMontadora
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(303, 375);
+            this.label4.Location = new System.Drawing.Point(303, 378);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 15);
             this.label4.TabIndex = 7;
             this.label4.Text = "Contato";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(636, 375);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Sair";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(723, 399);
+            this.ClientSize = new System.Drawing.Size(723, 402);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
@@ -154,11 +169,12 @@ namespace CatalogoMontadora
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox_modelo);
             this.Controls.Add(this.comboBox_marca);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Catálogo montadoras";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagensCarros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,6 +191,7 @@ namespace CatalogoMontadora
         private System.Windows.Forms.PictureBox imagensCarros;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }
 
